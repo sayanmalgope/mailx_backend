@@ -1,11 +1,11 @@
 # Use Java 21 runtime
-FROM openjdk:21-jdk-slim
+FROM eclipse-temurin:21-jdk-jammy
 
 # Set working directory
 WORKDIR /app
 
-# Copy built JAR into container
-COPY target/spring-boot-docker.jar app.jar
+# Copy jar file
+COPY target/*.jar app.jar
 
 # Expose port
 EXPOSE 8080
